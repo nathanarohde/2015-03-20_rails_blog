@@ -7,6 +7,20 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:notice] = @post.title + 'has been updated.'
+      redirect_to posts_path
+    else
+      render :edit
+    end
+  end
+
   def new
     @post = Post.new
   end
