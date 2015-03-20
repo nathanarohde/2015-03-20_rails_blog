@@ -9,3 +9,9 @@
   <%= link_to new_post_comment_path(@post) do %>
     Add Comment
   <% end %>
+  <br>
+  <h5> Comments </h5>
+
+  <% @post.comments.each do |comment| %>
+    <li><%= comment.text %></li>
+  <% end %>
