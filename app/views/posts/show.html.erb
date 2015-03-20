@@ -1,0 +1,11 @@
+<h4> <%= @post.title %> </h4>
+  <%= link_to edit_post_path(@post) do %>Edit<% end %>
+  <%= link_to post_path(@post), :data => {:method => 'delete'} do %>Delete<% end %>
+
+  <p>
+    <%= @post.content %>
+  </p>
+
+  <%= link_to new_post_comment_path(@post) do %>
+    Add Comment
+  <% end %>
