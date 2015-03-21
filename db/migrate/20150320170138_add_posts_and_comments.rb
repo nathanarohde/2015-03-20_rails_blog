@@ -3,17 +3,15 @@ class AddPostsAndComments < ActiveRecord::Migration
     create_table :posts do |t|
       t.column :title, :string
       t.column :content, :text
-      t.column :date, :date
 
-      t.timestamps
+      t.date
     end
 
     create_table :comments do |t|
       t.column :text, :text
       t.column :post_id, :integer
-      t.column :date, :date
 
-      t.timestamps
+      t.date
     end
   end
 end
