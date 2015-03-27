@@ -1,6 +1,6 @@
 <h4> Add Photo </h4>
 
-<%= bootstrap_form_for [@space, @photo], :html => { :multipart => true } do |f| %>
+<%= bootstrap_form_for [@post, @photo], :html => { :multipart => true } do |f| %>
   <%= f.file_field :image, class: 'btn btn-sm' %>
   <%= f.submit 'Add Photo', class: 'btn btn-sm btn-success' %>
 <% end %>
@@ -9,5 +9,3 @@
   <%= image_tag photo.image.url(:thumb) %>
   <%= link_to 'Delete', post_photo_path(@post,photo), method: :delete%>
 <% end %>
-
-<%= link_to 'Done', post_photo(@post), class: 'btn btn-info' %>
