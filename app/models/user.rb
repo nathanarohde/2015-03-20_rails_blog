@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :password
+  has_many :posts
+  has_many :comments
   validates :name, presence: true
   validates_uniqueness_of :name
   validates :email, presence: true

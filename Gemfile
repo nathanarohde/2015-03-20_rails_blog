@@ -43,5 +43,10 @@ group :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
   gem 'launchy'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
