@@ -2,9 +2,15 @@
   <%= link_to edit_post_path(@post) do %>Edit<% end %>
   <%= link_to post_path(@post), :data => {:method => 'delete'} do %>Delete<% end %>
 
+  <% @post.photos.each do |photo| %>
+    <%= image_tag photo.image.url , class:'img-responsive img-list' %>
+  <% end %>
+
   <p>
     <%= @post.content %>
   </p>
+
+  <%= link_to 'Add Photos', new_post_photo_path(@post), class: 'btn btn-primary' %>
 
   <%= link_to new_post_comment_path(@post) do %>
     Add Comment

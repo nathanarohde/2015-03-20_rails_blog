@@ -24,6 +24,14 @@ class AddPostsAndComments < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    
+
+    create_table :photos do |t|
+      t.references :post
+      t.column :image_file_name, :string
+      t.column :image_content_type, :string
+      t.column :image_file_size, :integer
+    end
+
   end
+
 end

@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20150320170138) do
     t.integer "user_id"
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.integer "post_id"
+    t.string  "image_file_name"
+    t.string  "image_content_type"
+    t.integer "image_file_size"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string  "title"
     t.text    "content"

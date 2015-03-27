@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, :except => [:index]
   resources :posts do
     resources :comments, :except => [:show, :index]
+    resources :photos, :only => [:new]
   end
 
   get '/log-in' => 'sessions#new'
