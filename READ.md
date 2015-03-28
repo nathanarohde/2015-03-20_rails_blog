@@ -1,6 +1,6 @@
 Crappy Blog Program created by Nathan Rohde copyright Nathan Rohde 2015
 
-Program takes a message and stores it outside of the active browser window.
+Blog displays posts, uploads photos, allows for comments to be attached to posts.
 
 License:GPL v2
 
