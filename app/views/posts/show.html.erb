@@ -12,12 +12,8 @@
 
   <%= link_to 'Add Photos', new_post_photo_path(@post), class: 'btn btn-primary' %>
 
-  <%= link_to new_post_comment_path(@post) do %>
-    Add Comment
-  <% end %>
+  <%= link_to 'Add Comment', new_post_comment_path(@post), id: 'new_comment', remote: true %>
   <br>
   <h5> Comments </h5>
 
-  <% @post.comments.each do |comment| %>
-    <li><%= comment.text %><%= link_to edit_post_comment_path(@post, comment) do %>Edit<% end %> <%= link_to post_comment_path(@post, comment), :data => {:method => 'delete'} do %>Delete<% end %></li>
-  <% end %>
+  <%= render @post.comments %>

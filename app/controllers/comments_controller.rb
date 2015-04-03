@@ -9,6 +9,7 @@ before_action :require_user, only: [:new]
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
+    @comment.user_id = current_user.id
     if @comment.save
       flash[:notice] = "Comment added to " + @post.title
       redirect_to post_path(@comment.post)
