@@ -47,6 +47,8 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'database_cleaner'
+  gem 'poltergeist'
 end
 
 group :production do
