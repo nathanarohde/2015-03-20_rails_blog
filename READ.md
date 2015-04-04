@@ -24,10 +24,15 @@ Program can be loaded by setting browser to:
 
 <localhost:3000>
 
-hosted of heroku at: https://pure-dusk-6179.herokuapp.com/
+Non Ajax version hosted of heroku at: https://pure-dusk-6179.herokuapp.com/
+
+Ajax version not deployed on heroku.
 
 Known issues:
 No ability to assign or create an administrator.
 User has to be logged in to create a new post or comment, but anyone can edit, delete, or upload photos.
 Site is barebones and ugly.
 Website structure not particularly well thought out. (Not really a functioning website intended for public use, rather a sloppy exercise in learning how to make stuff in rails.)
+Tests are incomplete, currently stymied by trying to figure out how to target a click_on command using :xpath in capybara.
+
+No implemenation of Twilio.  At all.  None. Nada.

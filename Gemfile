@@ -31,6 +31,8 @@ gem 'bootstrap_form'
 
 gem 'bootswatch-rails'
 
+gem 'rest-client'
+
 gem 'paperclip'
 
 group :development, :test do
@@ -39,6 +41,7 @@ group :development, :test do
   gem 'spring'
   gem 'quiet_assets'
   gem 'pry'
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -49,6 +52,8 @@ group :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'poltergeist'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :production do

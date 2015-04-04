@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory(:user) do
     name('dude')
     email('dude@dudemail.com')
+    phone('0123456789')
     password('dude')
     password_confirmation('dude')
   end

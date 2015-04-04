@@ -5,9 +5,6 @@ require 'capybara/rails'
 require 'rspec/rails'
 require 'pry'
 
-require 'capybara/poltergeist'
-Capybara.javascript_driver = :poltergeist
-
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
