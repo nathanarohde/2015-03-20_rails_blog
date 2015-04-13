@@ -6,9 +6,9 @@ describe 'Destroys a comment' do
     post = FactoryGirl.create(:post, user: user)
     comment = FactoryGirl.create(:comment, post: post, user: user)
     visit post_path(post)
-    find(:xpath,'//[contains(comment,"delete")]')
+    find('.delete').find('delete').click
     #Attempting to target the delete link for a comment.
-    click_on 'Delete'
+    # click_on 'Delete'
     expect(page).to have_no_content (comment.text)
   end
 end

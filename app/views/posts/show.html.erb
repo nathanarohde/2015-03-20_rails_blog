@@ -1,5 +1,5 @@
 <h4> <%= @post.title %> </h4>
-  <%= link_to edit_post_path(@post) do %>Edit<% end %>
+  <%= link_to 'Edit', edit_post_path(@post), id: 'edit_post', remote: true %>
   <%= link_to post_path(@post), :data => {:method => 'delete'} do %>Delete<% end %>
 
   <% @post.photos.each do |photo| %>
