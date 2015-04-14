@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the add a comment process' do
+describe Comment, :vcr => true do
   it 'adds a new comment' do
     user = FactoryGirl.create(:user)
     post = FactoryGirl.create(:post)

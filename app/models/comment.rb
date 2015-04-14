@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
   belongs_to :post
   belongs_to :user
   validates :text, :presence => true
-  after_save :send_sms
+  # after_save :send_sms
 
 private
   begin

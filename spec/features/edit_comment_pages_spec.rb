@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the edit a comment process' do
+describe Comment, :vcr => true do
   it 'checks to see if the visit_path line leads to an update comment' do
     user = FactoryGirl.create(:user)
     post = FactoryGirl.create(:post)
@@ -15,7 +15,7 @@ describe 'the edit a comment process' do
   end
 end
 
-describe 'Edits a comment' do
+describe Comment, :vcr => true do
   it 'Edits a comment' do
     user = FactoryGirl.create(:user)
     post = FactoryGirl.create(:post, user: user)

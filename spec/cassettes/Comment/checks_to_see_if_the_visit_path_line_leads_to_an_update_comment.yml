@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<twilio account sid>:2a0260c4535f2cf4553c5554642b5caf@api.twilio.com/2010-04-01/Accounts/<twilio
+      account sid>/Messages.json
+    body:
+      encoding: US-ASCII
+      string: Body=Your%20post%20was%20commented%20on.&From=9203198944&To=9203445238
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 14 Apr 2015 22:13:27 GMT
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '760'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SMd25c7a4f3e7242e5b1d75879d6bd9396", "date_created": "Tue,
+        14 Apr 2015 22:13:27 +0000", "date_updated": "Tue, 14 Apr 2015 22:13:27 +0000",
+        "date_sent": null, "account_sid": "<twilio account sid>", "to": "+19203445238",
+        "from": "+19203198944", "body": "Your post was commented on.", "status": "queued",
+        "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version":
+        "2010-04-01", "price": null, "price_unit": "USD", "error_code": null, "error_message":
+        null, "uri": "/2010-04-01/Accounts/<twilio account sid>/Messages/SMd25c7a4f3e7242e5b1d75879d6bd9396.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/<twilio account sid>/Messages/SMd25c7a4f3e7242e5b1d75879d6bd9396/Media.json"}}'
+    http_version: 
+  recorded_at: Tue, 14 Apr 2015 22:13:27 GMT
+recorded_with: VCR 2.9.3
